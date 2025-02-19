@@ -1,40 +1,22 @@
-.lottie-animation {
-    width: 100%;        /* Takes full width of its parent */
-    max-width: 700px;   /* On larger screens, limit to 700px */
-    height: auto;       /* Adjust height automatically */
-  }
-  
-  .logo img {
+/* Lottie Container: Sets a maximum width for large screens, 
+   and scales down to fit smaller devices */
+   .lottie-container {
     width: 100%;
-    max-width: 350px;
-    height: auto;
+    max-width: 700px;  /* Limit the max width on large screens */
+    height: 500px;     /* Fixed height, but can be changed to auto if you prefer */
+    margin: 0 auto;    /* Center the animation horizontally if parent is wider */
   }
   
-  /* Media Query for devices with a max-width of 768px (e.g., tablets and smaller) */
+  /* For smaller devices, reduce height or let it auto-adjust */
   @media (max-width: 768px) {
-    .lottie-animation {
-      max-width: 100%;  /* Allow full width on smaller screens */
-    }
-    .logo img {
-      max-width: 200px; /* Reduce logo size on smaller screens */
+    .lottie-container {
+      height: 400px;
     }
   }
   
-  /* Optional: Further adjust for very small screens (e.g., smartphones) */
   @media (max-width: 480px) {
-    .logo img {
-      max-width: 150px; /* Smaller logo for very small screens */
+    .lottie-container {
+      height: 300px;
     }
-
-    .carousel-item {
-        min-height: 500px;
-      }
-      
-      @media (max-width: 768px) {
-        .carousel-item {
-          min-height: 300px; /* or auto */
-        }
-      }
-      
   }
   
