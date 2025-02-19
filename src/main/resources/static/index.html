@@ -6,7 +6,6 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <title>Growhire</title>
       <meta name="keywords" content="">
@@ -33,220 +32,239 @@
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+      <link rel="stylesheet" href="css/lottie-animation.css">
 
 
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
-      <div class="wrapper">
-      <!-- end loader -->
-      <div class="sidebar">
-         <!-- Sidebar  -->
-         <nav id="sidebar">
-            <div id="dismiss">
-               <i class="fa fa-arrow-left"></i>
-            </div>
-            <ul class="list-unstyled components">
-               <li class="active"> <a href="#">Home</a> </li>
-               <li><a href="#about">About </a> </li>
-               <li><a href="#work">Work</a> </li>
-               <li><a href="#contact">Contact </a> </li>
-            </ul>
-         </nav>
-      </div>
-      <div id="content">
-         <!-- header -->
-         <header>
-            <!-- header inner -->
-            <div class="header">
-               <div class="container-fluid">
+
+      <body class="main-layout">
+        <!-- loader  -->
+        <div class="loader_bg">
+          <div class="loader">
+            <img src="images/loading.gif" alt="#" />
+          </div>
+        </div>
+        <!-- end loader -->
+        <div class="wrapper">
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <nav id="sidebar">
+              <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+              </div>
+              <ul class="list-unstyled components">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div id="content">
+            <!-- header -->
+            <header>
+              <!-- header inner -->
+              <div class="header">
+                <div class="container-fluid">
                   <div class="row">
-                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                           <div class="center-desk">
-                              <div class="logo">
-                                 <a href="index.html">
-                                    <img src="images/logo.png" alt="#" style="width: 300px; height: auto;" />
-                                  </a>
-                              </div>
-                           </div>
+                    <!-- Logo Section -->
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                      <div class="full">
+                        <div class="center-desk">
+                          <div class="logo">
+                            <!-- Responsive Logo using CSS class -->
+                            <a href="index.html">
+                              <img src="images/logo.png" alt="GrowHire Logo" class="responsive-logo" />
+                            </a>
+                          </div>
                         </div>
-                     </div>
-                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <ul class="btn">
-                           <li class="down_btn">
-                              <a href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" rel="noopener noreferrer">Git repo</a>
-                            </li>
-                           <!-- <li><a href="#">Sign Up</a></li>
-                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
-                           <li><button type="button" id="sidebarCollapse">
-                              <img src="images/menu_icon.png" alt="#" />
-                              </button>
-                           </li>
-                        </ul>
-                     </div>
+                      </div>
+                    </div>
+                    <!-- Navigation and Button Section -->
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                      <ul class="btn">
+                        <li class="down_btn">
+                          <a href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" rel="noopener noreferrer">
+                            Git repo
+                          </a>
+                        </li>
+                        <li>
+                          <button type="button" id="sidebarCollapse">
+                            <img src="images/menu_icon.png" alt="Menu Icon" class="responsive-menu-icon" />
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-               </div>
-            </div>
-         </header>
-         <!-- end header inner -->
-         <!-- end header -->
+                </div>
+              </div>
+            </header>
+            <!-- end header inner -->
+            <!-- end header -->
+      
+    
 
-         <!-- banner -->
+<!-- banner -->
 <div id="banner" class="banner_main">
-   <div class="container-fluid">
-     <div class="banner-content">
-       <div class="row">
-         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-           <div class="text-bg">
-             <h1>Grow<br> Your Hire <br>Potential</h1>
-             <p>
-               Welcome to GrowHire! 🚀<br>
-               Your ultimate job search companion designed to unlock your career potential. 🌟<br><br>
-               I know that finding the perfect job can be overwhelming—especially on platforms like LinkedIn, where opportunities abound but the right fit can be hard to pinpoint. 🤔<br><br>
-               Let's explore Growhire.
-             </p>
-             <a class="read_more" href="#">Read more</a>
-           </div>
-         </div>
-         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
-           <div class="images_box">
-             <figure>
-               <img src="images/img2.png" alt="Banner Image">
-             </figure>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- <!-- end banner -->
+  <div class="container-fluid">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+          <div class="text-bg">
+            <h1>Grow<br> Your Hire <br>Potential</h1>
+            <p>
+              Welcome to GrowHire! 🚀<br>
+              Your ultimate job search companion designed to unlock your career potential. 🌟<br><br>
+              I know that finding the perfect job can be overwhelming—especially on platforms like LinkedIn, where opportunities abound but the right fit can be hard to pinpoint. 🤔<br><br>
+              Let's explore Growhire.
+            </p>
+            <a class="read_more" href="#">Read more</a>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+          <div class="images_box">
+            <figure>
+              <!-- Make the image responsive -->
+              <img 
+                src="images/img2.png" 
+                alt="Banner Image" 
+                style="width: 100%; height: auto; max-width: 600px;"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end banner -->
+
  
 
 
                
          <!-- About Carousel -->
-         <div id="aboutCarousel" class="carousel slide about" data-ride="carousel" data-interval="false">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-            <li data-target="#aboutCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#aboutCarousel" data-slide-to="1"></li>
-            <li data-target="#aboutCarousel" data-slide-to="2"></li>
-            </ol>
+<div id="aboutCarousel" class="carousel slide about" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#aboutCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#aboutCarousel" data-slide-to="1"></li>
+    <li data-target="#aboutCarousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+    <!-- Slide 1: About Software with Lottie Animation -->
+    <div class="carousel-item active" style="min-height: 500px;">
+      <div class="container-fluid" style="min-height: 500px;">
+        <div class="row d_flex" style="min-height: 500px;">
+          <!-- Left Column: Lottie Animation -->
+          <div class="col-md-5">
+            <!-- Use a CSS class to define responsive dimensions -->
+            <div id="lottie-container" class="lottie-animation"></div>
+            <script>
+              console.log("Initializing Lottie animation...");
+              var animation = lottie.loadAnimation({
+                container: document.getElementById("lottie-container"), // The container div
+                renderer: "svg",    // Options: "svg", "canvas", "html"
+                loop: true,         // Loop the animation
+                autoplay: true,     // Start automatically
+                path: "animations/cat.json" // Path to your JSON file
+              });
             
-        <!-- Carousel Inner -->
-<div class="carousel-inner">
-   <!-- Slide 1: About Software with Lottie Animation -->
-   <div class="carousel-item active" style="min-height: 500px;">
-     <div class="container-fluid" style="min-height: 500px;">
-       <div class="row d_flex" style="min-height: 500px;">
-         <!-- Left Column: Lottie Animation -->
-         <div class="col-md-5">
-           <div id="lottie-container" style="width: 700px; height: 500px;"></div>
-           <script>
-             console.log("Initializing Lottie animation...");
-             var animation = lottie.loadAnimation({
-               container: document.getElementById("lottie-container"), // The container div
-               renderer: "svg",    // Options: "svg", "canvas", "html"
-               loop: true,         // Loop the animation
-               autoplay: true,     // Start automatically
-               path: "animations/cat.json" // Path to your JSON file
-             });
-           
-             // Debugging Events
-             animation.addEventListener("DOMLoaded", function() {
-               console.log("Lottie animation JSON successfully loaded.");
-             });
-             animation.addEventListener("complete", function() {
-               console.log("Lottie animation completed.");
-             });
-             animation.addEventListener("error", function(event) {
-               console.error("Lottie animation failed to load:", event);
-             });
-             animation.addEventListener("data_ready", function() {
-               console.log("Lottie animation data is ready.");
-             });
-             animation.addEventListener("config_ready", function() {
-               console.log("Lottie animation config is ready.");
-             });
-             console.log("Lottie animation setup complete.");
-           </script>
-         </div>
-         <!-- Right Column: Text Content -->
-         <div class="col-md-7">
-           <div class="titlepage">
-             <h2>Stop <span class="blu">Scrolling</span></h2>
-             <p>
-               Tired of endless scrolling? 🚫 <br>
-               Let GrowHire do the work! It scans thousands of jobs in minutes 🚀,
-               analyzes your resume with AI 🤖, and delivers match scores in seconds ⏱!
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   
-   <!-- Slide 2: About Software with Image -->
-   <div class="carousel-item" style="min-height: 500px;">
-     <div class="container-fluid" style="min-height: 500px;">
-       <div class="row d_flex" style="min-height: 500px;">
-         <!-- Left Column: Image -->
-         <div class="col-md-5">
-           <div class="about_img">
-             <figure>
-               <img src="images/about_img.jpg" alt="#" style="width:100%; height:500px; object-fit:cover;">
-             </figure>
-           </div>
-         </div>
-         <!-- Right Column: Text Content -->
-         <div class="col-md-7">
-           <div class="titlepage">
-             <h2>About <span class="blu">Software</span></h2>
-             <p>
-               <strong>Extensive Job Scanning:</strong> GrowHire can scan <strong class="blu">thousands</strong> of job listings on LinkedIn <strong class="blu">in minutes</strong> to bring you a handpicked selection of opportunities.<br><br>
-               <strong>Resume Analysis:</strong> GrowHire uses AI to compare your resume against each job description.<br><br>
-               <strong>AI-Driven Match Scores:</strong> Receive a detailed analysis with a match score (expressed in percentage) that tells you exactly how well your skills and experience align with each role.
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   
-   <!-- Slide 3: More Features -->
-   <div class="carousel-item" style="min-height: 500px;">
-     <div class="container-fluid" style="min-height: 500px;">
-       <div class="row d_flex" style="min-height: 500px;">
-         <!-- Left Column: Image -->
-         <div class="col-md-5">
-           <div class="about_img">
-             <figure>
-               <img src="images/work_img.jpg" alt="#" style="width: 100%; height: 500px; object-fit: cover;">
-             </figure>
-           </div>
-         </div>
-         <!-- Right Column: Text Content -->
-         <div class="col-md-7">
-           <div class="titlepage">
-             <h2>More <span class="blu">Features</span></h2>
-             <p>
-               <strong>Automated Connections:</strong> Experience <strong class="blu">effortless</strong> networking by connecting with industry professionals without the tedious manual effort.<br><br>
-               <strong>Smart Feed Scroller:</strong> Automatically scroll through your feed and save posts based on <strong class="blu">keywords</strong> you've defined.<br><br>
-               <strong>Results Display:</strong> All results will be presented in a table with all the details.
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- <!-- End of Carousel Inner -->
+              // Debugging Events
+              animation.addEventListener("DOMLoaded", function() {
+                console.log("Lottie animation JSON successfully loaded.");
+              });
+              animation.addEventListener("complete", function() {
+                console.log("Lottie animation completed.");
+              });
+              animation.addEventListener("error", function(event) {
+                console.error("Lottie animation failed to load:", event);
+              });
+              animation.addEventListener("data_ready", function() {
+                console.log("Lottie animation data is ready.");
+              });
+              animation.addEventListener("config_ready", function() {
+                console.log("Lottie animation config is ready.");
+              });
+              console.log("Lottie animation setup complete.");
+            </script>
+          </div>
+          <!-- Right Column: Text Content -->
+          <div class="col-md-7">
+            <div class="titlepage">
+              <h2>Stop <span class="blu">Scrolling</span></h2>
+              <p>
+                Tired of endless scrolling? 🚫 <br>
+                Let GrowHire do the work! It scans thousands of jobs in minutes 🚀,
+                analyzes your resume with AI 🤖, and delivers match scores in seconds ⏱!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 2: About Software with Image -->
+    <div class="carousel-item" style="min-height: 500px;">
+      <div class="container-fluid" style="min-height: 500px;">
+        <div class="row d_flex" style="min-height: 500px;">
+          <!-- Left Column: Image -->
+          <div class="col-md-5">
+            <div class="about_img">
+              <figure>
+                <img src="images/about_img.jpg" alt="#" 
+                     style="width: 100%; height: auto; max-height: 500px; object-fit: cover;">
+              </figure>
+            </div>
+          </div>
+          <!-- Right Column: Text Content -->
+          <div class="col-md-7">
+            <div class="titlepage">
+              <h2>About <span class="blu">Software</span></h2>
+              <p>
+                <strong>Extensive Job Scanning:</strong> GrowHire can scan <strong class="blu">thousands</strong> of job listings on LinkedIn <strong class="blu">in minutes</strong> to bring you a handpicked selection of opportunities.<br><br>
+                <strong>Resume Analysis:</strong> GrowHire uses AI to compare your resume against each job description.<br><br>
+                <strong>AI-Driven Match Scores:</strong> Receive a detailed analysis with a match score (expressed in percentage) that tells you exactly how well your skills and experience align with each role.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 3: More Features -->
+    <div class="carousel-item" style="min-height: 500px;">
+      <div class="container-fluid" style="min-height: 500px;">
+        <div class="row d_flex" style="min-height: 500px;">
+          <!-- Left Column: Image -->
+          <div class="col-md-5">
+            <div class="about_img">
+              <figure>
+                <img src="images/work_img.jpg" alt="#" 
+                     style="width: 100%; height: auto; max-height: 500px; object-fit: cover;">
+              </figure>
+            </div>
+          </div>
+          <!-- Right Column: Text Content -->
+          <div class="col-md-7">
+            <div class="titlepage">
+              <h2>More <span class="blu">Features</span></h2>
+              <p>
+                <strong>Automated Connections:</strong> Experience <strong class="blu">effortless</strong> networking by connecting with industry professionals without the tedious manual effort.<br><br>
+                <strong>Smart Feed Scroller:</strong> Automatically scroll through your feed and save posts based on <strong class="blu">keywords</strong> you've defined.<br><br>
+                <strong>Results Display:</strong> All results will be presented in a table with all the details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Carousel Inner -->
+</div>
+
  
  <!-- JavaScript to Control the Scrolling Behavior -->
  <script>
@@ -430,7 +448,7 @@
                                <!--  <h3>Newsletter </h3> -->
                               </div>
                               <form class="bottom_form">
-                                 <input class="enter" placeholder="Enter Your Email" type="text" name="Enter Your Email">
+                                 <!--<input class="enter" placeholder="Enter Your Email" type="text" name="Enter Your Email"> -->
                                <!--  <button class="sub_btn">subscribe</button>-->
                               </form>
                            </div>

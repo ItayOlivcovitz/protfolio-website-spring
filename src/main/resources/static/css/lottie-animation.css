@@ -1,0 +1,40 @@
+.lottie-animation {
+    width: 100%;        /* Takes full width of its parent */
+    max-width: 700px;   /* On larger screens, limit to 700px */
+    height: auto;       /* Adjust height automatically */
+  }
+  
+  .logo img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  
+  /* Media Query for devices with a max-width of 768px (e.g., tablets and smaller) */
+  @media (max-width: 768px) {
+    .lottie-animation {
+      max-width: 100%;  /* Allow full width on smaller screens */
+    }
+    .logo img {
+      max-width: 200px; /* Reduce logo size on smaller screens */
+    }
+  }
+  
+  /* Optional: Further adjust for very small screens (e.g., smartphones) */
+  @media (max-width: 480px) {
+    .logo img {
+      max-width: 150px; /* Smaller logo for very small screens */
+    }
+
+    .carousel-item {
+        min-height: 500px;
+      }
+      
+      @media (max-width: 768px) {
+        .carousel-item {
+          min-height: 300px; /* or auto */
+        }
+      }
+      
+  }
+  
