@@ -50,9 +50,9 @@
           <i class="fa fa-arrow-left"></i>
         </div>
         <ul class="list-unstyled components">
-          <li class="active"> <a href="#">Home</a> </li>
-          <li><a href="#about">About </a></li>
-          <li><a href="#work">Work</a></li>
+          <li class="active"> <a href="#home">Home</a> </li>
+          <li><a href="#aboutCarousel">Work </a></li>
+          <li><a href="#get_started">Get Started</a></li>
           <li><a href="#contact">Contact </a></li>
         </ul>
       </nav>
@@ -106,7 +106,7 @@
 
 
 <!-- banner -->
-<div id="banner" class="banner_main">
+<div id="home" class="banner_main">
   <div class="container-fluid">
     <div class="banner-content">
       <div class="row">
@@ -118,7 +118,7 @@
               Let GrowHire do the work!<br> It scans thousands of jobs in minutes 🚀<br><br>
              
             </p>
-            <a class="read_more" href="#">Read more</a>
+            <a class="read_more" href="#aboutCarousel">Read more</a>
           </div>
         </div>
         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
@@ -193,11 +193,12 @@
           <!-- Right Column: Text Content -->
           <div class="col-md-7">
             <div class="titlepage">
-              <h2>Just <span class="blu">Search</span></h2>
+              <h2>Simply <span class="blu">Search</span></h2>
               <p>
-                <strong>Extensive Job Scanning:</strong> With GrowHire, experience lightning-fast scanning of <strong class="blu">thousands</strong> of LinkedIn job listings <strong class="blu">in minutes</strong>—delivering a curated selection of top opportunities just for you!<br><br>
-                Simply upload your resume, write your own ChatGPT prompt, select how many pages to explore, and let GrowHire work its magic. It’s job hunting made effortless and exciting!
+                With GrowHire, enjoy lightning-fast scanning of <strong class="blu">thousands</strong> of LinkedIn job listings <strong class="blu">in minutes</strong>—all curated for your unique profile!<br><br>
+                Just upload your resume, write your custom ChatGPT prompt, choose how many pages to explore, and let GrowHire handle the rest. It’s a job hunt made effortless and exciting!
               </p>
+
             </div>
           </div>
         </div>
@@ -221,9 +222,11 @@
             <div class="titlepage">
               <h2>The <span class="blu">Results</span></h2>
               <p>
-                The results are displayed in a clear table, with each job assigned a score by ChatGPT—higher scores mean a better match for you.<br><br>
-                Instead of wasting time sifting through countless job posts, GrowHire delivers only the most relevant opportunities tailored just for you.
+                Each job listing is displayed in a clear table.<br> ChatGPT assigns a score to every job ! <br>higher scores indicate a better match for you.<br><br>
+                Instead of wasting time sifting through countless posts, GrowHire delivers only the most relevant opportunities, tailored just for you.
               </p>
+              
+              
             </div>
           </div>
         </div>
@@ -248,7 +251,7 @@
               <h2>More <span class="blu">Features</span></h2>
               <p>
                 <strong>Smart Feed Scroller:</strong> Automatically scroll through your feed and save posts based on <strong class="blu">keywords</strong> you've defined.<br><br>
-                <strong>Automated Connections:</strong> Experience <strong class="blu">effortless</strong> networking by connecting with industry professionals without the tedious manual effort.
+                <strong>Automated Connections:</strong> Experience <strong class="blu">effortless</strong> networking by connecting with people without the tedious manual effort.
               </p>
             </div>
           </div>
@@ -366,7 +369,7 @@
       </div>
     </div>
   </div>
-  <div class="choose_bg">
+  <div  id="get_started" class="choose_bg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -392,7 +395,7 @@
                     </li>
                   <li data-title="Lets Go!"
                           data-text='To get started, follow these simple steps:<br>
-                          1️⃣ Clone the repository.<br>
+                          1️⃣ Clone the <a href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" style="color: blue; text-decoration: underline;">repository</a>.<br>
                           2️⃣ Configure your credentials in the <code>.env</code> file.<br>
                           3️⃣ Modify <code>prompt_template.txt</code> and <code>keywords.txt</code>.<br>
                           4️⃣ Install dependencies: <code>pip install -r requirements.txt</code>.<br> 
@@ -526,20 +529,27 @@
        
          <!--  footer -->
          <footer>
-            <div class="footer">
+            <div id="contact" class="footer">
                <div class="container">
                   <div class="row">
                      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                         <div class="row">
-                           <div class="col-md-8 col-sm-6">
+                          <div style="display: flex; align-items: center;">
+                            <img src="images/logo.png" alt="GrowHire Logo" style="max-width: 150px; margin-right: 20px;">
+                            <div class="col-md-8 col-sm-6">
                               <div class="address">
-                                 <h3>GrowHire </h3>
+                                <!-- You can add a heading or leave it empty if needed -->
+                                <h3>GrowHire</h3>
                               </div>
                               <ul class="location_icon">
-                                 <li>Love GrowHire? If it’s been a game-changer for you, share the magic </li>                              </ul>
-                           </div>
+                                <li>Love GrowHire? If it’s been a game-changer for you, share the magic</li>
+                              </ul>
+                            </div>
+                          </div>
+                          
                            <div class="col-md-4 col-sm-6">
                               <div class="address">
+                                
                                  <!--<h3>Links</h3>
                                  <ul class="Menu_footer">
                                     <li class="active"> <a href="#">Home</a> </li>
