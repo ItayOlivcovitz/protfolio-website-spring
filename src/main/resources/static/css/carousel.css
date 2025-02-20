@@ -1,0 +1,8 @@
+#aboutCarousel .carousel-inner {
+    height: 500px; /* Ensures the overall container is consistent */
+  }
+  
+  #aboutCarousel .carousel-item {
+    min-height: 00px;
+    
+  }

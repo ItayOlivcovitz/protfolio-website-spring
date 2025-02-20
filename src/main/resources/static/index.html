@@ -32,6 +32,9 @@
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+      <link rel="stylesheet" href="css/carousel.css">
+
+
 
 
    </head>
@@ -194,10 +197,13 @@
           <div class="col-md-7">
             <div class="titlepage">
               <h2>Simply <span class="blu">Search</span></h2>
-              <p>
-                With GrowHire, enjoy lightning-fast scanning of <strong class="blu">thousands</strong> of LinkedIn job listings <strong class="blu">in minutes</strong>—all curated for your unique profile!<br><br>
-                Just upload your resume, write your custom ChatGPT prompt, choose how many pages to explore, and let GrowHire handle the rest. It’s a job hunt made effortless and exciting!
-              </p>
+              <div class="text-container">
+                <p>
+                  With GrowHire, enjoy lightning-fast scanning of <strong class="blu">thousands</strong> of LinkedIn job listings <strong class="blu">in minutes</strong>—all curated for your unique profile!<br>
+                  Just upload your resume!
+                </p>
+              </div>
+              
 
             </div>
           </div>
@@ -223,7 +229,6 @@
               <h2>The <span class="blu">Results</span></h2>
               <p>
                 Each job listing is displayed in a clear table.<br> ChatGPT assigns a score to every job ! <br>higher scores indicate a better match for you.<br><br>
-                Instead of wasting time sifting through countless posts, GrowHire delivers only the most relevant opportunities, tailored just for you.
               </p>
               
               
@@ -297,6 +302,23 @@
  <!-- JavaScript to Control the Scrolling Behavior -->
   
  <script>
+  $("#aboutCarousel").on("touchstart", function(event) {
+    let xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event) {
+      let xMove = event.originalEvent.touches[0].pageX;
+      let sensitivity = 5;
+      if (Math.floor(xClick - xMove) > sensitivity) {
+        $(this).carousel('next');
+      } else if (Math.floor(xClick - xMove) < -sensitivity) {
+        $(this).carousel('prev');
+      }
+    });
+    $(this).on("touchend", function() {
+      $(this).off("touchmove");
+    });
+  });
+
+
    $(document).ready(function() {
      console.log("Document ready.");
  
