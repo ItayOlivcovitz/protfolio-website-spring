@@ -665,7 +665,7 @@ ul.btn li:last-child {
 .choose .choose_box {
      background: #fff;
      padding: 35px 35px;
-     text-align: center;
+     text-align: rtl;
 }
 
 .choose .choose_box span {
