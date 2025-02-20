@@ -115,7 +115,7 @@
       <div class="row">
         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
           <div class="text-bg">
-            <h1>Grow<br> Your Hire <br>Potential</h1>
+            <h1>Grow<br> Your Hire <br>Potential <br>In LinkedIn</h1>
             <p>
               Tired of endless scrolling? 🚫 <br><br>
               Let GrowHire do the work!<br> It scans thousands of jobs in minutes 🚀<br><br>
@@ -253,9 +253,9 @@
           <!-- Right Column: Text Content -->
           <div class="col-md-7">
             <div class="titlepage">
-              <h2>More <span class="blu">Features</span></h2>
+              <h2>Other <span class="blu">Features</span></h2>
               <p>
-                <strong>Smart Feed Scroller:</strong> Automatically scroll through your feed and save posts based on <strong class="blu">keywords</strong> you've defined.<br><br>
+                <strong>Smart Feed Scroller:</strong> Automatically scroll through your feed and save posts based on <strong class="blu">keywords</strong> you've defined.<br>
                 <strong>Automated Connections:</strong> Experience <strong class="blu">effortless</strong> networking by connecting with people without the tedious manual effort.
               </p>
             </div>
@@ -318,53 +318,6 @@
     });
   });
 
-
-   $(document).ready(function() {
-     console.log("Document ready.");
- 
-     // Create an Intersection Observer to detect when the carousel enters the viewport
-     var observer = new IntersectionObserver(function(entries, observer) {
-       entries.forEach(function(entry) {
-         if (entry.isIntersecting) {
-           console.log("Carousel is now visible.");
-           // Once the carousel is visible, wait 5 seconds before advancing
-           setTimeout(function() {
-             var activeIndex = $('#aboutCarousel .carousel-item.active').index();
-             console.log("After 5 seconds of visibility, active slide index: " + activeIndex);
-             
-             // Check if slide 1 (index 0) is still active
-             if (activeIndex === 0) {
-               console.log("Active slide is still slide 1. Advancing to slide 2.");
-               $('#aboutCarousel').carousel('next');
-             } else {
-               console.log("Active slide is not slide 1. No action taken.");
-             }
-           }, 8000);
- 
-           // Once triggered, we no longer need to observe
-           observer.disconnect();
-         }
-       });
-     }, {
-       threshold: 0.5 // Adjust this threshold as needed (50% of the carousel is visible)
-     });
- 
-     // Observe the carousel element
-     observer.observe(document.getElementById("aboutCarousel"));
- 
-     // When a slide transition completes, pause the carousel if it's no longer on slide 1
-     $('#aboutCarousel').on('slid.bs.carousel', function(e) {
-       var newIndex = $(e.relatedTarget).index();
-       console.log("Slide transition complete. New active slide index: " + newIndex);
-       
-       if (newIndex !== 0) {
-         console.log("Active slide is not slide 1. Pausing carousel.");
-         $('#aboutCarousel').carousel('pause');
-       } else {
-         console.log("Active slide is still slide 1. Carousel will continue if auto-cycle were enabled.");
-       }
-     });
-   });
  </script>
  
  
