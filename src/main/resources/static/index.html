@@ -334,7 +334,7 @@
 <!-- end about -->
 
 <!-- choose section -->
-<div class="choose ">
+<div class="choose">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -344,7 +344,7 @@
       </div>
     </div>
   </div>
-  <div  id="get_started" class="choose_bg">
+  <div id="get_started" class="choose_bg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -352,8 +352,16 @@
             <!-- Left Column: List -->
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_right0">
               <ul class="easy">
+                <!-- First item now becomes "No ChatGPT Key?" -->
                 <li class="active"
-                    data-title="You Need To Have"
+                    data-title="Thats Ok!"
+                    data-text='Just contact me and I&apos;ll provide you with a free API key to try and test my app.<br><br>
+                              In exchange, I&apos;ll be asking for your valuable feedback, new ideas, and suggestions for improvement.'
+                    data-img2="images/small_cat.png">
+                  <a href="#">No ChatGPT Key?</a>
+                </li>
+                <!-- Second item is now "Application Requirements" -->
+                <li data-title="You Need To Have"
                     data-text='✅ A ChatGPT API key to power our cutting-edge AI analysis.<br>
                                ✅ Docker Desktop to seamlessly run our Dockerized MySQL container.<br><br>
                                💡 Prefer running it with <strong>Docker</strong>? No problem! GrowHire runs smoothly in a containerized environment too.<br><br>
@@ -362,49 +370,39 @@
                     data-img2="images/docker.png">
                   <a href="#">Application Requirements</a>
                 </li>
-                    <li data-title="Thats Ok!"
-                        data-text='Just contact me and I&apos;ll provide you with a free API key to try and test my app.<br><br>
-                                  In exchange, I&apos;ll be asking for your valuable feedback, new ideas, and suggestions for improvement.'
-                        data-img2="images/small_cat.png">
-                      <a href="#">No ChatGPT Key?</a>
-                    </li>
-                  <li data-title="Lets Go!"
-                          data-text='To get started, follow these simple steps:<br>
-                          1️⃣ Clone the <a href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" style="color: blue; text-decoration: underline;">repository</a>.<br>
-                          2️⃣ Configure your credentials in the <code>.env</code> file.<br>
-                          3️⃣ Modify <code>prompt_template.txt</code> and <code>keywords.txt</code>.<br>
-                          4️⃣ Install dependencies: <code>pip install -r requirements.txt</code>.<br> 
-                          5️⃣ Fire up GrowHire: <code>python main.py</code>.<br><br>'>
-                        <a href="#">Install</a>
-                      </li>
-                      <li data-title="GrowHire"
-                          data-text='I created this application to effortlessly expand my LinkedIn network.<br><br>
-                          Tired of manually sending 30 connection requests a day and spending countless hours on LinkedIn, I thought—why not automate the process so I could reclaim my time for other things?<br><br>
-                          Even after my initial success, I realized I was still stuck scrolling through posts and hunting for job opportunities.<br><br>
-                          That’s when I decided to build this app—to save time, streamline my job search, and free up my day for what really matters.'>
-                        <a href="#">About GrowHire</a>
-                      </li>
+                <li data-title="Lets Go!"
+                    data-text='To get started, follow these simple steps:<br>
+                              1️⃣ Clone the <a href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" style="color: blue; text-decoration: underline;">repository</a>.<br>
+                              2️⃣ Configure your credentials in the <code>.env</code> file.<br>
+                              3️⃣ Modify <code>prompt_template.txt</code> and <code>keywords.txt</code>.<br>
+                              4️⃣ Install dependencies: <code>pip install -r requirements.txt</code>.<br> 
+                              5️⃣ Fire up GrowHire: <code>python main.py</code>.<br><br>'>
+                  <a href="#">Install</a>
+                </li>
+                <li data-title="GrowHire"
+                    data-text='I created this application to effortlessly expand my LinkedIn network.<br><br>
+                              Tired of manually sending 30 connection requests a day and spending countless hours on LinkedIn, I thought—why not automate the process so I could reclaim my time for other things?<br><br>
+                              Even after my initial success, I realized I was still stuck scrolling through posts and hunting for job opportunities.<br><br>
+                              That’s when I decided to build this app—to save time, streamline my job search, and free up my day for what really matters.'>
+                  <a href="#">About GrowHire</a>
+                </li>
+              </ul>
             </div>
             <!-- Right Column: Display Box -->
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 padding_left0">
               <div class="choose_box">
-                <h3>You Need To Have</h3>
+                <!-- Default title and text now reflect the active (first) list item -->
+                <h3>Thats Ok!</h3>
                 <p id="choose-text">
-                  ✅ A ChatGPT API key to power our cutting-edge AI analysis.<br>
-                  ✅ Docker Desktop to seamlessly run our Dockerized MySQL container.<br><br>
-                  💡 Prefer running it with <strong>Docker</strong>? No problem! GrowHire runs smoothly in a containerized environment too.<br><br>
-                  🔗 Get started now and take your hiring to the next level! 🚀
+                  Just contact me and I&apos;ll provide you with a free API key to try and test my app.<br><br>
+                  In exchange, I&apos;ll be asking for your valuable feedback, new ideas, and suggestions for improvement.
                 </p>
-                <!-- Images container updated dynamically via JS -->
+                <!-- The images-wrapper now only shows the image for the "No ChatGPT Key?" option -->
                 <div class="images-wrapper" style="text-align: center;">
                   <img 
-                    src="images/ChatGPT.png" 
-                    alt="ChatGPT Logo" 
+                    src="images/small_cat.png" 
+                    alt="Placeholder" 
                     style="max-width: 80px; height: auto; vertical-align: middle;">
-                  <img 
-                    src="images/docker.png" 
-                    alt="Docker Logo" 
-                    style="max-width: 120px; height: auto; margin-left: 10px; vertical-align: middle;">
                 </div>
               </div>
             </div>
@@ -416,6 +414,7 @@
   </div>
 </div>
 <!-- end choose section -->
+
 
 
 <script>
