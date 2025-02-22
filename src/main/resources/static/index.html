@@ -38,6 +38,7 @@
 
       <link rel="stylesheet" href="css/carousel.css">
 
+      <link rel="stylesheet" href="css/counter.css">
 
 
 
@@ -114,6 +115,7 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
+       
 
 
 <!-- banner -->
@@ -456,7 +458,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="titlepage">
-          <h2>How To <span class="blu"> Get Started</span></h2>
+          <h2><span class="blu"> Get Started</span></h2>
         </div>
       </div>
     </div>
@@ -617,7 +619,128 @@
 
   
          
-        
+<!-- Counter Section -->
+<section class="counter-section" id="counters">
+  <div class="counter-box">
+    <h1 class="counter u-title" data-animation-duration="3000">130</h1>
+    <p class="counter-label">Hours Spent Working on This Project</p>
+  </div>
+  <div class="counter-box">
+    <h1 class="counter u-title" id="visitorCounter" data-animation-duration="3000">0</h1>
+    <p class="counter-label">Visitors</p>
+  </div>
+</section>
+
+<!-- jQuery (Ensure it's included) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- JavaScript to update and animate the counters -->
+<script>
+  $(document).ready(function () {
+    // Function to animate a given counter element from 0 to its target number
+    function animateCounter($element) {
+      var target = parseInt($element.text());
+      var duration = parseInt($element.attr("data-animation-duration")) || 3000;
+      console.log("Animating counter for element:", $element, "to target:", target);
+      $element.text("0"); // Reset to 0 before animation
+      $({ countNum: 0 }).animate(
+        { countNum: target },
+        {
+          duration: duration,
+          easing: "swing",
+          step: function () {
+            $element.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $element.text(this.countNum);
+            console.log("Finished animating counter for element:", $element);
+          },
+        }
+      );
+    }
+
+    // Function to animate all counters in the section
+    function animateCounters() {
+      console.log("Animating all counters...");
+      $(".u-title").each(function () {
+        animateCounter($(this));
+      });
+    }
+
+    // Function to update the visitor counter via GET request and animate it
+    function updateVisitorCounter() {
+      console.log("Fetching visitor count from server...");
+      $.get("http://localhost:8080/api/visitor/count", function (data) {
+        console.log("Visitor count received:", data);
+        $("#visitorCounter").text(data);
+        animateCounter($("#visitorCounter"));
+      }).fail(function () {
+        console.error("Failed to fetch visitor count.");
+      });
+    }
+
+    // Function to register visitor
+    function registerVisitor() {
+      console.log("Fetching user's IP...");
+      $.getJSON("https://api64.ipify.org?format=json", function (data) {
+        var visitorIp = data.ip;
+
+        // Prepare visitor data
+        var visitorData = {
+          ip: visitorIp,
+         
+        };
+
+        console.log("Registering visitor with data:", visitorData);
+
+        // Send a POST request to register the visitor
+        $.ajax({
+          url: "http://localhost:8080/api/visitor/save",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(visitorData),
+          success: function (response) {
+            console.log("Visitor registered successfully:", response);
+            updateVisitorCounter(); // Update counter after visitor registration
+          },
+          error: function (error) {
+            console.error("Error registering visitor:", error);
+          },
+        });
+      }).fail(function () {
+        console.error("Failed to retrieve IP address.");
+      });
+    }
+
+    // Intersection Observer to trigger animations when section is visible
+    var countersSection = document.getElementById("counters");
+    var hasAnimated = false;
+
+    if ("IntersectionObserver" in window) {
+      let observer = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasAnimated) {
+              console.log("Counter section is visible. Triggering animations...");
+              registerVisitor(); // Register visitor and update counter
+              animateCounters();
+              hasAnimated = true; // Trigger only once
+              observer.unobserve(countersSection);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(countersSection);
+    } else {
+      console.log("IntersectionObserver not supported. Triggering animations immediately.");
+      registerVisitor(); // Register visitor and update counter
+      animateCounters();
+    }
+  });
+</script>
+
+
        
          <!--  footer -->
          <footer>

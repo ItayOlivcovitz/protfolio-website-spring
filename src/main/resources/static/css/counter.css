@@ -1,0 +1,17 @@
+/* Basic styles for the counters */
+.counter-section {
+    text-align: center;
+    padding: 50px;
+  }
+  .counter-box {
+    display: inline-block;
+    margin: 20px;
+  }
+  .counter {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .counter-label {
+    font-size: 24px;
+  }
