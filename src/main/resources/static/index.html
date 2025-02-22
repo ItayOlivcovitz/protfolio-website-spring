@@ -622,7 +622,7 @@
 <!-- Counter Section -->
 <section class="counter-section" id="counters">
   <div class="counter-box">
-    <h1 class="counter u-title" data-animation-duration="3000">130</h1>
+    <h1 class="counter u-title" data-animation-duration="3000">175</h1>
     <p class="counter-label">Hours Spent Working on This Project</p>
   </div>
   <div class="counter-box">
@@ -679,39 +679,6 @@
       });
     }
 
-    // Function to register visitor
-    function registerVisitor() {
-      console.log("Fetching user's IP...");
-      $.getJSON("https://api64.ipify.org?format=json", function (data) {
-        var visitorIp = data.ip;
-
-        // Prepare visitor data
-        var visitorData = {
-          ip: visitorIp,
-         
-        };
-
-        console.log("Registering visitor with data:", visitorData);
-
-        // Send a POST request to register the visitor
-        $.ajax({
-          url: "http://localhost:8080/api/visitor/save",
-          type: "POST",
-          contentType: "application/json",
-          data: JSON.stringify(visitorData),
-          success: function (response) {
-            console.log("Visitor registered successfully:", response);
-            updateVisitorCounter(); // Update counter after visitor registration
-          },
-          error: function (error) {
-            console.error("Error registering visitor:", error);
-          },
-        });
-      }).fail(function () {
-        console.error("Failed to retrieve IP address.");
-      });
-    }
-
     // Intersection Observer to trigger animations when section is visible
     var countersSection = document.getElementById("counters");
     var hasAnimated = false;
@@ -721,10 +688,12 @@
         function (entries, observer) {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !hasAnimated) {
-              console.log("Counter section is visible. Triggering animations...");
-              registerVisitor(); // Register visitor and update counter
+              console.log("Counter section is visible. Triggering visitor counter update and animations...");
+              // Call the GET request to update the visitor counter
+              updateVisitorCounter();
+              // Optionally animate any other counters
               animateCounters();
-              hasAnimated = true; // Trigger only once
+              hasAnimated = true; // Ensure it only triggers once
               observer.unobserve(countersSection);
             }
           });
@@ -733,13 +702,20 @@
       );
       observer.observe(countersSection);
     } else {
-      console.log("IntersectionObserver not supported. Triggering animations immediately.");
-      registerVisitor(); // Register visitor and update counter
+      console.log("IntersectionObserver not supported. Triggering actions immediately.");
+      updateVisitorCounter();
       animateCounters();
     }
   });
 </script>
 
+
+<script type="module">
+  import { saveVisitorInfo } from './js/saveVisitorInfo.js';
+
+  // Call the function when the page loads
+  window.onload = saveVisitorInfo;
+</script>
 
        
          <!--  footer -->
