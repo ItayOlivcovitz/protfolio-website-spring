@@ -433,7 +433,7 @@
 </div>
 
 
-<!-- Slide 3: More Features -->
+<!-- Slide 4: More Features -->
 <div class="carousel-item" style="min-height: 500px;">
   <div class="container-fluid" style="min-height: 500px;">
     <div class="row d_flex" style="min-height: 500px;">
@@ -441,17 +441,19 @@
       <div class="col-md-5">
         <div class="about_img">
           <figure>
-            <img src="images/work_img.jpg" alt="#" style="width:80%; height:auto;">
+            <img src="images/get_connected.png" alt="#" style="width:80%; height:auto;">
           </figure>
         </div>
       </div>
       <!-- Right Column: Text Content -->
       <div class="col-md-7">
         <div class="titlepage">
-          <h2>Feed <span class="blu">Scroller</span></h2>
+          <h2>Expend  <span class="blu">Your network</span></h2>
           <p>
-            No more endless scrolling! GrowHire automatically spots and saves the posts that truly matter by matching them against your custom <span class="blu">Keywords.txt</span> file. If a post features your chosen <span class="blu">keywords</span>, it’s instantly saved—ensuring you always have the important updates at your fingertips. 💡💾<br><br>
-          </p>
+            <p>
+              Expand your network effortlessly! GrowHire scans the people section on LinkedIn and automatically sends connection requests, streamlining your outreach and saving you time. 🤝🚀<br><br>
+            </p>
+                      </p>
 
         </div>
       </div>
@@ -672,17 +674,21 @@
 
   
          
-<!-- Counter Section -->
-<section class="counter-section" id="counters">
+<!-- Counter Section with Background -->
+<section class="counter-section" id="counters" style="background: url('images/bg.jpg') no-repeat center center; background-size: cover; padding: 50px 0;">
   <div class="counter-box">
-    <h1 class="counter u-title" data-animation-duration="3000">175</h1>
+    <!-- data-target holds the final number, text starts at 0 -->
+    <h1 class="counter u-title" data-animation-duration="3000" data-target="175">0</h1>
     <p class="counter-label">Hours Spent Working on This Project</p>
   </div>
   <div class="counter-box">
-    <h1 class="counter u-title" id="visitorCounter" data-animation-duration="3000">0</h1>
+    <!-- Keep visitors at 0; the script will update it after GET request -->
+    <h1 class="counter u-title" id="visitorCounter" data-animation-duration="3000" data-target="0">0</h1>
     <p class="counter-label">Visitors</p>
   </div>
 </section>
+
+
 
 <!-- jQuery (Ensure it's included) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -690,76 +696,79 @@
 <!-- JavaScript to update and animate the counters -->
 <script>
   $(document).ready(function () {
-    // Function to animate a given counter element from 0 to its target number
-    function animateCounter($element) {
-      var target = parseInt($element.text());
-      var duration = parseInt($element.attr("data-animation-duration")) || 3000;
-      console.log("Animating counter for element:", $element, "to target:", target);
-      $element.text("0"); // Reset to 0 before animation
-      $({ countNum: 0 }).animate(
-        { countNum: target },
-        {
-          duration: duration,
-          easing: "swing",
-          step: function () {
-            $element.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            $element.text(this.countNum);
-            console.log("Finished animating counter for element:", $element);
-          },
-        }
-      );
-    }
+  // Function to animate a given counter element from 0 to its target number
+  function animateCounter($element) {
+    // Instead of reading the final number from the text, read from data-target
+    var target = parseInt($element.attr("data-target")) || 0;
+    var duration = parseInt($element.attr("data-animation-duration")) || 3000;
+    console.log("Animating counter for element:", $element, "to target:", target);
 
-    // Function to animate all counters in the section
-    function animateCounters() {
-      console.log("Animating all counters...");
-      $(".u-title").each(function () {
-        animateCounter($(this));
-      });
-    }
+    // Reset the text to "0" before animation (it might already be 0, but just to be sure)
+    $element.text("0");
 
-    // Function to update the visitor counter via GET request and animate it
-    function updateVisitorCounter() {
-      console.log("Fetching visitor count from server...");
-      $.get("https://growhire.up.railway.app/api/visitor/count", function (data) {
-        console.log("Visitor count received:", data);
-        $("#visitorCounter").text(data);
-        animateCounter($("#visitorCounter"));
-      }).fail(function () {
-        console.error("Failed to fetch visitor count.");
-      });
-    }
-
-    // Intersection Observer to trigger animations when section is visible
-    var countersSection = document.getElementById("counters");
-    var hasAnimated = false;
-
-    if ("IntersectionObserver" in window) {
-      let observer = new IntersectionObserver(
-        function (entries, observer) {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !hasAnimated) {
-              console.log("Counter section is visible. Triggering visitor counter update and animations...");
-              // Call the GET request to update the visitor counter
-              updateVisitorCounter();
-              // Optionally animate any other counters
-              animateCounters();
-              hasAnimated = true; // Ensure it only triggers once
-              observer.unobserve(countersSection);
-            }
-          });
+    $({ countNum: 0 }).animate(
+      { countNum: target },
+      {
+        duration: duration,
+        easing: "swing",
+        step: function () {
+          $element.text(Math.floor(this.countNum));
         },
-        { threshold: 0.5 }
-      );
-      observer.observe(countersSection);
-    } else {
-      console.log("IntersectionObserver not supported. Triggering actions immediately.");
-      updateVisitorCounter();
-      animateCounters();
-    }
-  });
+        complete: function () {
+          $element.text(this.countNum);
+          console.log("Finished animating counter for element:", $element);
+        },
+      }
+    );
+  }
+
+  // Function to animate all counters in the section
+  function animateCounters() {
+    console.log("Animating all counters...");
+    $(".u-title").each(function () {
+      animateCounter($(this));
+    });
+  }
+
+  // Function to update the visitor counter via GET request and animate it
+  function updateVisitorCounter() {
+    console.log("Fetching visitor count from server...");
+    $.get("https://growhire.up.railway.app/api/visitor/count", function (data) {
+      console.log("Visitor count received:", data);
+      // Update the data-target attribute for #visitorCounter
+      $("#visitorCounter").attr("data-target", data);
+      animateCounter($("#visitorCounter"));
+    }).fail(function () {
+      console.error("Failed to fetch visitor count.");
+    });
+  }
+
+  // Intersection Observer to trigger animations when section is visible
+  var countersSection = document.getElementById("counters");
+  var hasAnimated = false;
+
+  if ("IntersectionObserver" in window) {
+    let observer = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            console.log("Counter section is visible. Triggering visitor counter update and animations...");
+            updateVisitorCounter();  // update visitors
+            animateCounters();       // animate the rest
+            hasAnimated = true;      // run only once
+            observer.unobserve(countersSection);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(countersSection);
+  } else {
+    console.log("IntersectionObserver not supported. Triggering actions immediately.");
+    updateVisitorCounter();
+    animateCounters();
+  }
+});
 </script>
 
 
