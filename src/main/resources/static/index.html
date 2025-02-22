@@ -670,7 +670,7 @@
     // Function to update the visitor counter via GET request and animate it
     function updateVisitorCounter() {
       console.log("Fetching visitor count from server...");
-      $.get("http://localhost:8080/api/visitor/count", function (data) {
+      $.get("https://growhire.up.railway.app/count", function (data) {
         console.log("Visitor count received:", data);
         $("#visitorCounter").text(data);
         animateCounter($("#visitorCounter"));
