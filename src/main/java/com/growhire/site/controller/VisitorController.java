@@ -51,7 +51,7 @@ public class VisitorController {
     @GetMapping("/count")
     public ResponseEntity<Long> getVisitorCount() {
         long count = visitorService.countVisitors();
-        return ResponseEntity.ok(count+37);
+        return ResponseEntity.ok(count+113);
     }
 
     private String parseUserAgent(String userAgent) {
