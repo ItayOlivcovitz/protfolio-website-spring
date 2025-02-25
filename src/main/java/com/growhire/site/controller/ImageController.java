@@ -18,11 +18,11 @@ public class ImageController {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    @GetMapping(value = "/images/desplay.png", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<byte[]> getDesplayImage() {
+    // Endpoint for project website image
+    @GetMapping(value = "/growhire/images/display.png", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getProjectWebsiteDisplayImage() {
         try {
-            // Load the image from the classpath (e.g., src/main/resources/static/images/desplay.png)
-            Resource resource = resourceLoader.getResource("classpath:static/images/display.png");
+            Resource resource = resourceLoader.getResource("classpath:/projectwebsite/growhire/images/display.png");
             byte[] imageBytes = StreamUtils.copyToByteArray(resource.getInputStream());
 
             HttpHeaders headers = new HttpHeaders();
@@ -30,7 +30,24 @@ public class ImageController {
 
             return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
         } catch (IOException e) {
-            // Log the error in a real application
+            // Log error as needed
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
+    // Endpoint for static image
+    @GetMapping(value = "/images/display.png", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getStaticDisplayImage() {
+        try {
+            Resource resource = resourceLoader.getResource("classpath:/static/images/display.png");
+            byte[] imageBytes = StreamUtils.copyToByteArray(resource.getInputStream());
+
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.IMAGE_PNG);
+
+            return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
+        } catch (IOException e) {
+            // Log error as needed
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
