@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("growhire/api/visitor")
-@CrossOrigin(origins = {"http://localhost:8080", "https://itay-olivcovitz.up.railway.app/growhire"}) // Allowed origins
+@CrossOrigin(origins = {"http://localhost:8080", "https://itay-olivcovitz.up.railway.app/growhire/images/display.png"}) // Allowed origins
 public class VisitorController {
 
     private final VisitorService visitorService;
