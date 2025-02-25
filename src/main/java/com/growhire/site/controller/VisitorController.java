@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/visitor")
-@CrossOrigin(origins = {"http://localhost:8080", "https://itay-olivcovitz-portfolio.up.railway.app"}) // Allowed origins
+@CrossOrigin(origins = {"http://localhost:8080", "https://itay-olivcovitz.up.railway.app"}) // Allowed origins
 public class VisitorController {
 
     private final VisitorService visitorService;
