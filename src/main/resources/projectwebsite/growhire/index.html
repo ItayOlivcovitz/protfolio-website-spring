@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta property="og:title" content="Growhire" />
+    <meta property="og:description" content="Welcome to GrowHire—your smarter & faster way to explore LinkedIn. We offer three awesome features designed to transform your job search experience." />
+    <meta property="og:image" content="https://growhire.up.railway.app/images/desplay.png" />
+    <meta property="og:url" content="https://growhire.up.railway.app/" />
+    <meta property="og:type" content="website" />
+
+    
+
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- site metas -->
+      <title>Growhire</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+       <!-- Set the base URL for all relative links -->
+       <base href="/growhire/">
+
+       <!-- bootstrap css -->
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+       <!-- style css -->
+       <link rel="stylesheet" href="css/style.css">
+       <!-- Responsive-->
+       <link rel="stylesheet" href="css/responsive.css">
+       <!-- fevicon -->
+       <link rel="icon" href="images/fevicon.png" type="image/gif" />
+       <!-- Scrollbar Custom CSS -->
+       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+       <!-- Tweaks for older IEs-->
+       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+       <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+       <link rel="stylesheet" href="css/carousel.css">
+
+       <link rel="stylesheet" href="css/lottie-animation.css">
+
+       <link rel="stylesheet" href="css/carousel.css">
+
+       <link rel="stylesheet" href="css/counter.css">
+
+
+       <link rel="stylesheet" href="css/choose_section.css">
+
+     </head>
+
+   <body class="main-layout">
+  <!-- loader  -->
+  <div class="loader_bg">
+    <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+  </div>
+  <!-- end loader -->
+  <div class="wrapper">
+    <!-- end loader -->
+    <div class="sidebar">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div id="dismiss">
+          <i class="fa fa-arrow-left"></i>
+        </div>
+        <ul class="list-unstyled components">
+          <li class="active"> <a href="#home">Home</a> </li>
+          <li><a href="#aboutCarousel">Work </a></li>
+          <li><a href="#get_started">Get Started</a></li>
+          <li><a href="#contact">Contact </a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="content">
+      <!-- header -->
+      <header>
+        <!-- header inner -->
+        <div class="header">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                <div class="full">
+                  <div class="center-desk">
+                    <div class="logo">
+                      <!-- Responsive Logo -->
+                      <img 
+                        src="images/logo.png" 
+                        alt="GrowHire Logo" 
+                        style="width: 100%; max-width: 180px; height: auto;" 
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <ul class="btn">
+                  <li class="down_btn">
+                    <a 
+                      href="https://github.com/ItayOlivcovitz/GrowHire" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Git repo
+                    </a>
+                  </li>
+                  <li>
+                    <button type="button" id="sidebarCollapse">
+                      <img src="images/menu_icon.png" alt="#" class="img-fluid" />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+       
+
+
+<!-- banner -->
+<div id="home" class="banner_main">
+  <div class="container-fluid">
+    <div class="banner-content">
+      <div class="row">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+          <div class="text-bg">
+            <h1>Grow<br> Your Hire <br>Potential <br>In LinkedIn</h1>
+            <p>
+              Wave goodbye to endless scrolling and time-consuming job descriptions! 👋<br><br>
+              Welcome to GrowHire—your smarter & faster way to explore LinkedIn. We offer Three awesome features designed to transform your job search experience<br><br>
+            </p>
+            
+            
+            
+            
+            
+            <a class="read_more" href="#aboutCarousel">Read more</a>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+          <div class="images_box">
+            <figure>
+              <!-- Remove the inline styles, use a class instead -->
+              <div class="lottie-container" id="lottie-container"></div>
+              <script>
+                console.log("Initializing Lottie animation...");
+                var animation = lottie.loadAnimation({
+                  container: document.getElementById("lottie-container"), // The container div
+                  renderer: "svg",    // Options: "svg", "canvas", "html"
+                  loop: true,         // Loop the animation
+                  autoplay: true,     // Start automatically
+                  path: "animations/cat.json" // Path to your JSON file
+                });
+              
+                // Debugging Events
+                animation.addEventListener("DOMLoaded", function() {
+                  console.log("Lottie animation JSON successfully loaded.");
+                });
+                animation.addEventListener("complete", function() {
+                  console.log("Lottie animation completed.");
+                });
+                animation.addEventListener("error", function(event) {
+                  console.error("Lottie animation failed to load:", event);
+                });
+                animation.addEventListener("data_ready", function() {
+                  console.log("Lottie animation data is ready.");
+                });
+                animation.addEventListener("config_ready", function() {
+                  console.log("Lottie animation config is ready.");
+                });
+                console.log("Lottie animation setup complete.");
+              </script>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end banner -->
+
+ 
+
+
+               
+<!-- About Carousel -->
+<div id="aboutCarousel" class="carousel slide about" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#aboutCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#aboutCarousel" data-slide-to="1"></li>
+    <li data-target="#aboutCarousel" data-slide-to="2"></li>
+    <li data-target="#aboutCarousel" data-slide-to="3"></li>
+
+  </ol>
+
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+<!-- Slide 1: About Software with Lottie Animation -->
+<div class="carousel-item active" style="min-height: 500px;">
+  <div class="container-fluid" style="min-height: 500px;">
+    <div class="row d_flex" style="min-height: 500px;">
+      <!-- Left Column: Image -->
+      <div class="col-md-5">
+        <div class="about_img">
+          <figure>
+            <img src="images/job_search.png" alt="#" style="width:80%; height:auto;">
+          </figure>
+        </div>
+      </div>
+
+      <!-- Right Column: Text Content + Arrow Animation -->
+      <div class="col-md-7 d-flex align-items-center">
+        <!-- Flex container for text and arrow -->
+        <div class="titlepage d-flex align-items-center">
+          <!-- Text Section with right margin -->
+          <div class="me-3">
+            <h2>Simply <span class="blu">Search</span></h2>
+            <div class="text-container">
+              <p>
+                Say goodbye to the time-consuming process of combing through countless job listings. GrowHire quickly scans LinkedIn for opportunities tailored to your profile and uses your resume along with ChatGPT’s insights to pinpoint the perfect roles for you. 💼✨<br><br>
+              </p>
+              
+            </div>
+          </div>
+
+          <!-- Arrow Animation -->
+          <div class="images_box">
+            <figure>
+              <div class="arrow-container" id="arrow-container"></div>
+              <script>
+                console.log("Initializing Lottie animation...");
+                var animation = lottie.loadAnimation({
+                  container: document.getElementById("arrow-container"), // The container div
+                  renderer: "svg",    // Options: "svg", "canvas", "html"
+                  loop: true,         // Loop the animation
+                  autoplay: true,     // Start automatically
+                  path: "animations/arrow.json" // Path to your JSON file
+                });
+              
+                // Debugging Events
+                animation.addEventListener("DOMLoaded", function() {
+                  console.log("Lottie animation JSON successfully loaded.");
+                });
+                animation.addEventListener("complete", function() {
+                  console.log("Lottie animation completed.");
+                });
+                animation.addEventListener("error", function(event) {
+                  console.error("Lottie animation failed to load:", event);
+                });
+                animation.addEventListener("data_ready", function() {
+                  console.log("Lottie animation data is ready.");
+                });
+                animation.addEventListener("config_ready", function() {
+                  console.log("Lottie animation config is ready.");
+                });
+                console.log("Lottie animation setup complete.");
+              
+                // When the arrow is clicked, move to the next slide.
+                document.getElementById("arrow-container").addEventListener("click", function(){
+                  $('#aboutCarousel').carousel('next');
+                });
+              </script>
+            </figure>
+          </div>
+          <!-- End Arrow Animation -->
+        </div>
+      </div>
+      <!-- End Right Column -->
+    </div>
+  </div>
+</div>
+
+
+   <!-- Slide 2: About Software with Image -->
+<div class="carousel-item" style="min-height: 500px;">
+  <div class="container-fluid" style="min-height: 500px;">
+    <div class="row d_flex" style="min-height: 500px;">
+      <!-- Left Column: Image -->
+      <div class="col-md-5">
+        <div class="about_img">
+          <figure>
+            <video autoplay muted loop playsinline style="width:80%; height:auto;">
+              <source src="videos/scroll.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </figure>
+          
+          
+        </div>
+      </div>
+
+      <!-- Right Column: Text Content + Arrow Animation -->
+      <div class="col-md-7 d-flex align-items-center">
+        <!-- Flex container for text and arrow -->
+        <div class="titlepage d-flex align-items-center">
+          <!-- Text Section with right margin -->
+          <div class="me-3">
+            <h2>The <span class="blu">Results</span></h2>
+            <p>
+              Each job listing is displayed in a clear table. 📊<br>
+              ChatGPT assigns a score to every job! ⭐<br>
+              Higher scores indicate a better match for you. 👍<br><br>
+              Best of all, these results were delivered in under <br><span class="blu">5 minutes</span> 🚀 so you can focus on what matters most. ⏱️
+            </p>
+            
+            
+          </div>
+
+          <!-- Arrow Animation -->
+          <div class="images_box">
+            <figure>
+              <!-- New ID for Slide 2's arrow container -->
+              <div class="arrow-container" id="arrow-container2"></div>
+              <script>
+                console.log("Initializing Lottie animation for Slide 2...");
+                var animation2 = lottie.loadAnimation({
+                  container: document.getElementById("arrow-container2"), // The container div
+                  renderer: "svg",    // Options: "svg", "canvas", "html"
+                  loop: true,         // Loop the animation
+                  autoplay: true,     // Start automatically
+                  path: "animations/arrow.json" // Path to your JSON file
+                });
+              
+                // Debugging Events
+                animation2.addEventListener("DOMLoaded", function() {
+                  console.log("Lottie animation JSON (Slide 2) successfully loaded.");
+                });
+                animation2.addEventListener("complete", function() {
+                  console.log("Lottie animation (Slide 2) completed.");
+                });
+                animation2.addEventListener("error", function(event) {
+                  console.error("Lottie animation (Slide 2) failed to load:", event);
+                });
+                animation2.addEventListener("data_ready", function() {
+                  console.log("Lottie animation data (Slide 2) is ready.");
+                });
+                animation2.addEventListener("config_ready", function() {
+                  console.log("Lottie animation config (Slide 2) is ready.");
+                });
+                console.log("Lottie animation setup (Slide 2) complete.");
+              
+                // When the arrow is clicked, move to the next slide.
+                document.getElementById("arrow-container2").addEventListener("click", function(){
+                  $('#aboutCarousel').carousel('next');
+                });
+              </script>
+            </figure>
+          </div>
+          <!-- End Arrow Animation -->
+        </div>
+      </div>
+      <!-- End Right Column -->
+    </div>
+  </div>
+</div>
+
+
+    <!-- Slide 3: More Features -->
+<div class="carousel-item" style="min-height: 500px;">
+  <div class="container-fluid" style="min-height: 500px;">
+    <div class="row d_flex" style="min-height: 500px;">
+     <!-- Left Column: Image -->
+     <div class="col-md-5">
+      <div class="about_img">
+        <figure>
+          <video autoplay muted loop playsinline style="width:80%; height:auto;">
+            <source src="videos/feed_scroller.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+        
+        
+      </div>
+    </div>
+      <!-- Right Column: Text Content + Arrow Animation -->
+      <div class="col-md-7 d-flex align-items-center">
+        <div class="titlepage d-flex align-items-center">
+          <!-- Text Section with right margin -->
+          <div class="me-3">
+            <h2>Feed <span class="blu">Scroller</span></h2>
+            <p>
+              No more endless scrolling! GrowHire automatically spots and saves the posts that truly matter by matching them against your custom <span class="blu">Keywords.txt</span> file. If a post features your chosen <span class="blu">keywords</span>, it’s instantly saved—ensuring you always have the important updates at your fingertips. 💡💾<br><br>
+            </p>
+          </div>
+
+          <!-- Arrow Animation for Slide 3 -->
+          <div class="images_box">
+            <figure>
+              <!-- New ID for Slide 3's arrow container -->
+              <div class="arrow-container" id="arrow-container3"></div>
+              <script>
+                console.log("Initializing Lottie animation for Slide 3...");
+                var animation3 = lottie.loadAnimation({
+                  container: document.getElementById("arrow-container3"), // The container div for Slide 3
+                  renderer: "svg",    // Options: "svg", "canvas", "html"
+                  loop: true,         // Loop the animation
+                  autoplay: true,     // Start automatically
+                  path: "animations/arrow.json" // Path to your JSON file
+                });
+              
+                // Debugging events for Slide 3
+                animation3.addEventListener("DOMLoaded", function() {
+                  console.log("Lottie animation JSON (Slide 3) successfully loaded.");
+                });
+                animation3.addEventListener("complete", function() {
+                  console.log("Lottie animation (Slide 3) completed.");
+                });
+                animation3.addEventListener("error", function(event) {
+                  console.error("Lottie animation (Slide 3) failed to load:", event);
+                });
+                animation3.addEventListener("data_ready", function() {
+                  console.log("Lottie animation data (Slide 3) is ready.");
+                });
+                animation3.addEventListener("config_ready", function() {
+                  console.log("Lottie animation config (Slide 3) is ready.");
+                });
+                console.log("Lottie animation setup (Slide 3) complete.");
+              
+                // When the arrow is clicked, move to the next slide.
+                document.getElementById("arrow-container3").addEventListener("click", function(){
+                  $('#aboutCarousel').carousel('next');
+                });
+              </script>
+            </figure>
+          </div>
+          <!-- End Arrow Animation -->
+        </div>
+      </div>
+      <!-- End Right Column -->
+    </div>
+  </div>
+</div>
+
+
+<!-- Slide 4: More Features -->
+<div class="carousel-item" style="min-height: 500px;">
+  <div class="container-fluid" style="min-height: 500px;">
+    <div class="row d_flex" style="min-height: 500px;">
+      <!-- Left Column: Image -->
+      <div class="col-md-5">
+        <div class="about_img">
+          <figure>
+            <img src="images/get_connected.png" alt="#" style="width:80%; height:auto;">
+          </figure>
+        </div>
+      </div>
+      <!-- Right Column: Text Content -->
+      <div class="col-md-7">
+        <div class="titlepage">
+          <h2>Expend  <span class="blu">Your network</span></h2>
+          <p>
+            <p>
+              Expand your network effortlessly! GrowHire scans the people section on LinkedIn and automatically sends connection requests, streamlining your outreach and saving you time. 🤝🚀<br><br>
+            </p>
+                      </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <!-- Carousel Controls -->
+  <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
+    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+  </a>
+  <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
+    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  </a>
+  <!-- End of Carousel Inner -->
+</div>
+<script>
+  $(document).ready(function() {
+    console.log("Document is ready. Initializing swipe on #aboutCarousel");
+    if (typeof $.fn.swipe === 'undefined') {
+      console.error("TouchSwipe plugin not loaded!");
+    } else {
+      $("#aboutCarousel").swipe({
+        swipe: function(event, direction, distance, duration, fingerCount) {
+          console.log("Swipe detected: " + direction);
+          if(direction === 'left') {
+            $("#aboutCarousel").carousel('next');
+          } else if(direction === 'right') {
+            $("#aboutCarousel").carousel('prev');
+          }
+        },
+        threshold: 50,
+        triggerOnTouchEnd: true,
+        allowPageScroll: "vertical"
+      });
+    }
+  });
+  </script>
+  
+  
+
+ 
+ <!-- JavaScript to Control the Scrolling Behavior -->
+  
+ <script>
+  $("#aboutCarousel").on("touchstart", function(event) {
+    let xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event) {
+      let xMove = event.originalEvent.touches[0].pageX;
+      let sensitivity = 5;
+      if (Math.floor(xClick - xMove) > sensitivity) {
+        $(this).carousel('next');
+      } else if (Math.floor(xClick - xMove) < -sensitivity) {
+        $(this).carousel('prev');
+      }
+    });
+    $(this).on("touchend", function() {
+      $(this).off("touchmove");
+    });
+  });
+
+ </script>
+ 
+ 
+ 
+
+   <!-- Controls -->
+   <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
+     <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+   </a>
+   <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
+     <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+   </a>
+</div>
+<!-- end about -->
+
+<!-- choose section -->
+<div class="choose">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2>Get <span class="blu">Started</span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="choose_bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <!-- Left Column: List -->
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_right0">
+              <ul class="easy">
+                <li class="active"
+                    data-title="You Need To Have"
+                    data-text="✅ A ChatGPT API key to power our cutting-edge AI analysis.<br><br>No ChatGPT Key?<br><br>
+                               Thats Ok! Just contact me and I'll provide you with a free API key to try and test my app.<br><br>
+                               In exchange, I'll be asking for your valuable feedback, new ideas, and suggestions for improvement.<br><br>"
+                    data-img="images/small_cat.png">
+                  <a href="#">Application Requirements</a>
+                </li>
+                
+                <li data-title="Lets Go!"
+                data-text="To get started, follow these simple steps:<br>
+                1️⃣ Clone the <a href='https://github.com/ItayOlivcovitz/GrowHire' target='_blank' style='color: blue; text-decoration: underline;'>repository</a>.<br>
+                2️⃣ Configure your credentials in the <code>.env</code> file.<br>
+                3️⃣ Copy your resume to the resume folder as a PDF <br> and name the file <code>resume.pdf</code>.<br>
+                4️⃣ Modify <code>prompt_template.txt</code> and <code>keywords.txt</code>.<br>
+                5️⃣ Install dependencies: <code>pip install -r requirements.txt</code>.<br>
+                6️⃣ Fire up GrowHire: <code>python main.py</code>.<br><br>
+                📖 <strong>Read the README</strong> for detailed setup instructions &amp; usage policies."
+       
+                    data-img="images/small_cat.png">
+                  <a href="#">Instalation </a>
+                </li>
+                <li data-title="If you prefer , it is possible to use Docker"
+                    data-text="download and install Docker Desktop <a href='https://docs.docker.com/get-docker/' target='_blank' style='color: blue; text-decoration: underline;'>here</a>.<br><br>
+                              📖 <strong>Read the README</strong> - in the repository there is a folder named docker with two files one to buid an image and the other is to run the containers ."
+                    data-img="images/small_cat.png">
+                  <a href="#">Dockerize GrowHire</a>
+                </li>
+                <li data-title="GrowHire"
+                    data-text="I created this application to effortlessly expand my LinkedIn network.<br><br>
+                             Tired of manually sending 30 connection requests a day and spending countless hours on LinkedIn, I thought—why not automate the process so I could reclaim my time for other things?<br><br>
+                             Even after my initial success, I realized I was still stuck scrolling through posts and hunting for job opportunities.<br><br>
+                             That’s when I decided to build this app—to save time, streamline my job search, and free up my day for what really matters."
+                    data-img="images/small_cat.png">
+                  <a href="#">About GrowHire</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Right Column: Display Box -->
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 padding_left0">
+              <div class="choose_box d-flex align-items-center justify-content-between">
+                <div>
+                  <h3 id="choose-title">You Need To Have</h3>
+                  <p id="choose-text">
+                    ✅ A ChatGPT API key to power our cutting-edge AI analysis.<br><br>
+                    No ChatGPT Key?<br><br>
+                    Thats Ok! Just contact me and I'll provide you with a free API key to try and test my app.<br><br>
+                    In exchange, I'll be asking for your valuable feedback, new ideas, and suggestions for improvement.<br><br>
+                  </p>
+                </div>
+                <div>
+                  <img id="choose-icon" src="images/small_cat.png" alt="#" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <!-- end Right Column -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end choose section -->
+
+<!-- jQuery (Ensure it's included) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- JavaScript to update the display box based on the clicked list item -->
+<script>
+  $(document).ready(function () {
+    $('.easy li').click(function (e) {
+      e.preventDefault();
+      // Remove active class from all list items and add it to the clicked one
+      $('.easy li').removeClass('active');
+      $(this).addClass('active');
+      
+      // Retrieve the data attributes from the clicked item
+      var title = $(this).attr('data-title');
+      var text = $(this).attr('data-text');
+      var img = $(this).attr('data-img');
+      
+      // Update the display box with the new content
+      $('#choose-title').html(title);
+      $('#choose-text').html(text);
+      if (img) {
+        $('#choose-icon').attr('src', img);
+      }
+    });
+  });
+</script>
+
+  
+
+ 
+         
+
+   <!-- work 
+   <div id="work" class="work">
+      <div class="container-fluid">
+        <div class="row d_flex">
+          <div class="col-md-7">
+            <div class="titlepage">
+              <h2>How To <span class="blu">Get Started</span></h2>
+              <p>
+                🚀 <strong>Supercharge Your Hiring with GrowHire!</strong> 🚀<br><br>
+                Ready to revolutionize your hiring process? Getting started with <strong>GrowHire</strong> is quick and effortless! Here’s what you need:<br><br>
+                ✅ A <span class="blu">ChatGPT API key</span> to power our cutting-edge AI analysis.<br>
+                ✅ <span class="blu">Docker Desktop</span> to seamlessly run our <strong>Dockerized MySQL</strong> container.<br><br>
+                Once you're set, it's go time! Simply:<br>
+                1️⃣ Clone the repository.<br>
+                2️⃣ Configure your credentials in the <code>.env</code> file.<br>
+                3️⃣ Modify <code>prompt_template.txt</code> and <code>keywords.txt</code>.<br>
+                4️⃣ Install dependencies: <code>pip install -r requirements.txt</code>.<br> 
+                5️⃣ Fire up GrowHire: <code>python main.py</code>.<br><br>                
+                💡 Prefer running it with <strong>Docker</strong>? No problem! GrowHire runs smoothly in a containerized environment too.<br><br>
+                🔗 Get started now and take your hiring to the next level! 🚀<br><br>
+                📖 <strong>Read the README</strong> for detailed setup instructions &amp; usage policies.
+              </p>
+              <a class="read_more" href="https://github.com/ItayOlivcovitz/GrowHire" target="_blank" rel="noopener noreferrer">Git repo</a>
+            </div>
+          </div>
+          <div class="col-md-5">
+         
+        </div>
+      </div>
+    </div>
+   --> <!-- end work -->
+
+  
+         
+<!-- Counter Section with Background -->
+<section class="counter-section" id="counters" style="background: url('images/bg.jpg') no-repeat center center; background-size: cover; padding: 50px 0;">
+  <div class="counter-box">
+    <!-- data-target holds the final number, text starts at 0 -->
+    <h1 class="counter u-title" data-animation-duration="3000" data-target="175">0</h1>
+    <p class="counter-label">Hours Spent Working on This Project</p>
+  </div>
+  <div class="counter-box">
+    <!-- Keep visitors at 0; the script will update it after GET request -->
+    <h1 class="counter u-title" id="visitorCounter" data-animation-duration="3000" data-target="0">0</h1>
+    <p class="counter-label">Visitors</p>
+  </div>
+</section>
+
+
+
+<!-- jQuery (Ensure it's included) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- JavaScript to update and animate the counters -->
+<script>
+  $(document).ready(function () {
+  // Function to animate a given counter element from 0 to its target number
+  function animateCounter($element) {
+    // Instead of reading the final number from the text, read from data-target
+    var target = parseInt($element.attr("data-target")) || 0;
+    var duration = parseInt($element.attr("data-animation-duration")) || 3000;
+    console.log("Animating counter for element:", $element, "to target:", target);
+
+    // Reset the text to "0" before animation (it might already be 0, but just to be sure)
+    $element.text("0");
+
+    $({ countNum: 0 }).animate(
+      { countNum: target },
+      {
+        duration: duration,
+        easing: "swing",
+        step: function () {
+          $element.text(Math.floor(this.countNum));
+        },
+        complete: function () {
+          $element.text(this.countNum);
+          console.log("Finished animating counter for element:", $element);
+        },
+      }
+    );
+  }
+
+  // Function to animate all counters in the section
+  function animateCounters() {
+    console.log("Animating all counters...");
+    $(".u-title").each(function () {
+      animateCounter($(this));
+    });
+  }
+
+  // Function to update the visitor counter via GET request and animate it
+  function updateVisitorCounter() {
+    console.log("Fetching visitor count from server...");
+    $.get("https://growhire.up.railway.app/api/visitor/count", function (data) {
+      console.log("Visitor count received:", data);
+      // Update the data-target attribute for #visitorCounter
+      $("#visitorCounter").attr("data-target", data);
+      animateCounter($("#visitorCounter"));
+    }).fail(function () {
+      console.error("Failed to fetch visitor count.");
+    });
+  }
+
+  // Intersection Observer to trigger animations when section is visible
+  var countersSection = document.getElementById("counters");
+  var hasAnimated = false;
+
+  if ("IntersectionObserver" in window) {
+    let observer = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            console.log("Counter section is visible. Triggering visitor counter update and animations...");
+            updateVisitorCounter();  // update visitors
+            animateCounters();       // animate the rest
+            hasAnimated = true;      // run only once
+            observer.unobserve(countersSection);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(countersSection);
+  } else {
+    console.log("IntersectionObserver not supported. Triggering actions immediately.");
+    updateVisitorCounter();
+    animateCounters();
+  }
+});
+</script>
+
+
+<script type="module">
+  import { saveVisitorInfo } from './js/saveVisitorInfo.js';
+
+  // Call the function when the page loads
+  window.onload = saveVisitorInfo;
+</script>
+
+       
+        <!-- footer -->
+<footer>
+  <div id="contact" class="footer text-center">
+    <div class="container">
+      <!-- Center the columns in a row -->
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+          <div class="row">
+            <!-- Logo and text container -->
+            <div class="col-md-12">
+              <!-- Use a flex container to center the image and text together -->
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <img
+                  src="images/logo.png"
+                  alt="GrowHire Logo"
+                  style="max-width: 150px; margin-bottom: 10px;"
+                />
+                <div class="address">
+                </div>
+                <ul class="location_icon" style="list-style: none; padding: 0;">
+                  <li>Love GrowHire? <br>If it’s been a game-changer for you, share the magic</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex flex-column align-items-center">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="address">
+                <h3>Follow Me</h3>
+              </div>
+              <ul class="social_icon" style="list-style: none; padding: 0;">
+                <li>
+                  <a href="https://www.facebook.com/itayolivcovitzz/">
+                    Facebook
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/itay-olivcovitz/">
+                    Linkedin
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12">
+              <!-- Optionally add a newsletter or contact form here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <!-- You can add a small copyright notice here -->
+            <!-- <p>&copy; 2025 GrowHire. All rights reserved.</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+      </div>
+      <div class="overlay"></div>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+         
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+         
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+      </script>
+      <script>
+         $(document).ready(function() {
+             $(".fancybox").fancybox({
+                 openEffect: "none",
+                 closeEffect: "none"
+             });
+         
+             $(".zoom").hover(function() {
+         
+                 $(this).addClass('transition');
+             }, function() {
+         
+                 $(this).removeClass('transition');
+             });
+         });
+      </script>
+      <script>
+         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+         // Australia.
+         function initMap() {
+           var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 11,
+             center: {
+               lat: 40.645037,
+               lng: -73.880224
+             },
+           });
+         
+           var image = 'images/maps-and-flags.png';
+           var beachMarker = new google.maps.Marker({
+             position: {
+               lat: 40.645037,
+               lng: -73.880224
+             },
+             map: map,
+             icon: image
+           });
+         }
+      </script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+   </body>
+</html>
+

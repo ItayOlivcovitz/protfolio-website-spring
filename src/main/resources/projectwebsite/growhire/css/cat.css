@@ -1,0 +1,13 @@
+.carousel-item .lottie-container {
+    width: 100%; /* Make it responsive */
+    height: 100%; /* Allow full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lottie-container svg {
+    width: 100% !important; /* Forces full width */
+    height: auto !important;
+    max-height: 500px; /* Adjust as needed */
+}

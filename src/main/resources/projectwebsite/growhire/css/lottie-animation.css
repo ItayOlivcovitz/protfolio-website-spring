@@ -1,0 +1,44 @@
+/* Lottie Container: Sets a maximum width for large screens, 
+   and scales down to fit smaller devices */
+   .lottie-container {
+    width: 100%;
+    max-width: 700px;  /* Limit the max width on large screens */
+    height: 500px;     /* Fixed height, but can be changed to auto if you prefer */
+    margin: 0 auto;    /* Center the animation horizontally if parent is wider */
+  }
+  
+  /* For smaller devices, reduce height or let it auto-adjust */
+  @media (max-width: 768px) {
+    .lottie-container {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lottie-container {
+      height: 300px;
+    }
+  }
+  
+  /* Arrow Container: A smaller container for the arrow animation */
+  .arrow-container {
+    width: 250px !important;
+    height: 25s0px !important;
+    margin: 0 auto;
+  }
+  
+  /* Adjust the arrow container on smaller devices if needed */
+  @media (max-width: 768px) {
+    .arrow-container {
+      max-width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .arrow-container {
+      max-width: 50px;
+      height: 50px;
+    }
+  }
+  
