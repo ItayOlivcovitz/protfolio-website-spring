@@ -1,6 +1,8 @@
 package com.growhire.site.controller;
 
 import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -15,40 +17,32 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ImageController {
 
+    private static final Logger logger = LoggerFactory.getLogger(ImageController.class);
+
     @Autowired
     private ResourceLoader resourceLoader;
 
-    // Endpoint for project website image
     @GetMapping(value = "/growhire/images/display.png", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<byte[]> getProjectWebsiteDisplayImage() {
+    public ResponseEntity<byte[]> getDisplayImage() {
         try {
+            // Load the image from the specified location
             Resource resource = resourceLoader.getResource("classpath:/projectwebsite/growhire/images/display.png");
+
+            if (!resource.exists()) {
+                logger.error("Image not found at: {}", resource.getURI());
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            }
+
             byte[] imageBytes = StreamUtils.copyToByteArray(resource.getInputStream());
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.IMAGE_PNG);
+            logger.info("Successfully loaded image from: {}", resource.getURI());
 
             return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
         } catch (IOException e) {
-            // Log error as needed
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-    }
-
-    // Endpoint for static image
-    @GetMapping(value = "/images/display.png", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<byte[]> getStaticDisplayImage() {
-        try {
-            Resource resource = resourceLoader.getResource("classpath:/static/images/display.png");
-            byte[] imageBytes = StreamUtils.copyToByteArray(resource.getInputStream());
-
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.IMAGE_PNG);
-
-            return new ResponseEntity<>(imageBytes, headers, HttpStatus.OK);
-        } catch (IOException e) {
-            // Log error as needed
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            logger.error("Error reading image file", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }
