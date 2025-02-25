@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
-@RequestMapping("growhire/api/visitor")
+@RequestMapping("growhire/visitor")
 @CrossOrigin(origins = {"http://localhost:8080", "https://itay-olivcovitz.up.railway.app/growhire/images/display.png"}) // Allowed origins
 public class VisitorController {
 
