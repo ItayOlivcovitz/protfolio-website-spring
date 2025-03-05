@@ -27,4 +27,6 @@ public interface VisitorService {
      * @return List of all Visitor objects
      */
     List<Visitor> getAllVisitors();
+
+    public Visitor save(Visitor visitor);
 }

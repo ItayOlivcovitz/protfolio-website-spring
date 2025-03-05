@@ -28,4 +28,10 @@ public class VisitorServiceImpl implements VisitorService {
     public List<Visitor> getAllVisitors() {
         return visitorRepository.findAll();
     }
+
+    @Override
+    public Visitor save(Visitor visitor) {
+        // Save the visitor and return the saved entity
+        return visitorRepository.save(visitor);
+    }
 }
