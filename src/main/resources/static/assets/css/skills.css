@@ -1,30 +1,45 @@
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 items per row */
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping */
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 40px;
+
 }
 .skill-item {
   text-align: center;
   padding: 10px;
+  flex: 0 0 auto; /* prevent shrinking */
 }
+
 .skill-item img {
-  max-width: 100px;
+  max-width: 80px;
+  height: auto;
   margin-bottom: 10px;
 }
-/* Tablet Screens (768px and below) */
+
+/* Tablet Screens (≤ 768px) */
 @media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 30px;
+    padding: 20px;
   }
-}
-/* Mobile Screens (480px and below) */
-@media (max-width: 480px) {
-  .skills-container {
-    grid-template-columns: repeat(3, 1fr); /* Three items per row */
-    gap: 10px; /* Optional: Adjust gap for smaller screens */
+
+  .skill-item img {
+    max-width: 70px;
   }
 }
 
+/* Mobile Screens (≤ 480px) */
+@media (max-width: 480px) {
+  .skills-container {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .skill-item img {
+    max-width: 60px;
+  }
+
+  
+}
